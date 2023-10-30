@@ -8,8 +8,8 @@ const moduloValidation = () => {
             .withMessage("O módulo é obrigatório")
             .isString()
             .withMessage("A módulo é obrigatório")
-            .isLength({ max: 3 })
-            .withMessage("A módulo deve ter no máximo 3 caracteres.")
+            .isLength({ max: 4 })
+            .withMessage("A módulo deve ter no máximo 4 caracteres.")
             .isLength({ min: 2 })
             .withMessage("A módulo deve ter no mínimo 2 caracteres."),
     ];
