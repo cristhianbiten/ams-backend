@@ -2,11 +2,10 @@ const express = require("express");
 const router = express.Router();
 
 // Controller
-
 const { insertModulo, getModulo, getAllModulos, deleteModulo } = require("../controllers/ModuloController");
 
 // Middlewares
-const { moduloValidation } = require("../middlewares/ModuloValidation");
+const { moduloValidation } = require("../middlewares/moduloValidation");
 const authGuard = require("../middlewares/authGuard");
 const validate = require("../middlewares/handleValidations");
 
