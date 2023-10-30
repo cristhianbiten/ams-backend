@@ -15,7 +15,10 @@ const notesValidation = () => {
       .equals("undefined")
       .withMessage("O título é obrigatório")
       .isString()
-      .withMessage("O título é obrigatório"),
+      .withMessage("O título é obrigatório")
+      .isLength({ max: 60 })
+      .withMessage("O título deve ter no máximo 60 caracteres.")
+      ,
     body("modulo")
       .not()
       .equals("undefined")
