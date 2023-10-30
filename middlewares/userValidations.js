@@ -13,8 +13,8 @@ const userCreateValidation = () => {
       .isEmail()
       .withMessage("Insira um e-mail válido")
       .custom((value) => {
-        if (!value.endsWith("@fusionconsultoria.com.br")) {
-          throw new Error("O e-mail deve pertencer ao domínio @fusionconsultoria.com.br");
+        if (!value.endsWith("@fusionconsultoria.com")) {
+          throw new Error("O e-mail precisa ser da Fusion Consultoria.");
         }
         return true;
       }),

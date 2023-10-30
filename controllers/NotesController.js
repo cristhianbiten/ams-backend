@@ -386,6 +386,7 @@ const searchNotes = async (req, res) => {
 
     const query = {
         $or: [
+            { idChamado: new RegExp(q, "i") },
             { titulo: new RegExp(q, "i") },
             { modulo: new RegExp(q, "i") },
             { cliente: new RegExp(q, "i") },
