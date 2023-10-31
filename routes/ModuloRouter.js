@@ -11,8 +11,8 @@ const validate = require("../middlewares/handleValidations");
 
 // Routes
 router.post("/", authGuard, moduloValidation(), validate, insertModulo);
-router.get("/:id", authGuard, getModulo);
-router.get("/", authGuard, getAllModulos);
+router.get("/:id", getModulo);
+router.get("/", getAllModulos);
 router.delete("/:id", authGuard, deleteModulo);
 
 
