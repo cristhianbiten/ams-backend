@@ -21,7 +21,7 @@ const historyValidation = () => {
                 const inputDate = moment(value, "DD/MM/YYYY"); // Parse da data de entrada
                 const currentDate = moment(); // Data atual
                 if (inputDate.isAfter(currentDate)) {
-                    throw new Error("A data não pode ser maior que o dia atual");
+                    throw new Error("A data não pode ser maior que a atual");
                 }
                 return true;
             })

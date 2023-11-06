@@ -8,8 +8,8 @@ const processoNegocioValidation = () => {
             .withMessage("O processo de negócio é obrigatório")
             .isString()
             .withMessage("A processo de negócio é obrigatório")
-            .isLength({ min: 2 })
-            .withMessage("O processo de negócio deve ter no mínimo 5 caracteres."),
+            .isLength({ min: 4 })
+            .withMessage("O processo de negócio deve ter no mínimo 4 caracteres."),
     ];
 };
 

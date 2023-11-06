@@ -5,13 +5,13 @@ const submoduloValidation = () => {
         body("nome")
             .not()
             .equals("undefined")
-            .withMessage("O submodulo é obrigatório")
+            .withMessage("O submódulo é obrigatório")
             .isString()
-            .withMessage("A submodulo é obrigatório")
-            .isLength({ max: 3 })
-            .withMessage("O submodulo deve ter no máximo 3 caracteres.")
+            .withMessage("A submódulo é obrigatório")
+            .isLength({ max: 4 })
+            .withMessage("O submódulo deve ter no máximo 4 caracteres.")
             .isLength({ min: 2 })
-            .withMessage("O submodulo deve ter no mínimo 2 caracteres."),
+            .withMessage("O submódulo deve ter no mínimo 2 caracteres."),
     ];
 };
 
