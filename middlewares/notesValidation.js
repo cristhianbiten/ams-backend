@@ -17,7 +17,7 @@ const notesValidation = () => {
       .isString()
       .withMessage("O título é obrigatório")
       .isLength({ max: 120 })
-      .withMessage("O título deve ter no máximo 60 caracteres.")
+      .withMessage("O título deve ter no máximo 120 caracteres.")
       ,
     body("modulo")
       .not()
