@@ -16,7 +16,7 @@ const notesValidation = () => {
       .withMessage("O título é obrigatório")
       .isString()
       .withMessage("O título é obrigatório")
-      .isLength({ max: 60 })
+      .isLength({ max: 120 })
       .withMessage("O título deve ter no máximo 60 caracteres.")
       ,
     body("modulo")
@@ -36,7 +36,13 @@ const notesValidation = () => {
       .equals("undefined")
       .withMessage("A solicitação é obrigatória")
       .isString()
-      .withMessage("A solicitação é obrigatória")
+      .withMessage("A solicitação é obrigatória"),
+    body("prioridade")
+      .not()
+      .equals("undefined")
+      .withMessage("A prioridade é obrigatória")
+      .isString()
+      .withMessage("A prioridade é obrigatória")
   ];
 };
 
