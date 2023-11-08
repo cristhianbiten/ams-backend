@@ -13,8 +13,10 @@ const insertModulo = async (req, res) => {
             return res.status(400).json({ error: "Já existe um módulo com esse nome." });
         }
 
+        const nomeMaiusculas = nome.toUpperCase();
+
         const modulo = new Modulo({
-            nome
+            nome: nomeMaiusculas
         });
 
         await modulo.save();

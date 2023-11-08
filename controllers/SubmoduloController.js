@@ -20,9 +20,11 @@ const insertSubmodulo = async (req, res) => {
             return res.status(400).json({ error: "Já existe um submódulo com esse nome no mesmo módulo." });
         }
 
+        const nomeMaiusculas = nome.toUpperCase();
+
         // Crie o submódulo
         const submodulo = new Submodulo({
-            nome,
+            nome: nomeMaiusculas,
             modulo: moduloId
         });
 
