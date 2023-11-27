@@ -14,8 +14,8 @@ const authGuard = async (req, res, next) => {
   try {
     const verified = jwt.verify(token, jwtSecret);
 
-    // Set token expiration to 72 hours (3 days)
-    const expiresIn = 72 * 60 * 60; // 72 hours in seconds
+    // Set token expiration to 24 hours (1 days)
+    const expiresIn = 24 * 60 * 60; // 24 hours in seconds
 
     const user = await User.findById(verified.id).select("-password");
 
