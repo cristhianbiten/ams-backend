@@ -34,6 +34,9 @@ const userCreateValidation = () => {
         }
         return true;
       }),
+      body("role")
+      .isString()
+      .withMessage("O campo 'role' é obrigatório.")
   ];
 };
 
